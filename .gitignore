@@ -1,0 +1,3 @@
+# 忽略 WorkBuddy 内部迁移文件
+.disable_to_model_invocation_migration.json
+.model_invocation_to_override_migration.json
