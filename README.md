@@ -13,9 +13,9 @@
 - [项目结构](#项目结构)
 - [安装](#安装)
 - [使用示例](#使用示例)
-- [MCP 说明](./MCP说明.md)
-- [参赛申明](./参赛申明.md)
-- [License](#license)
+- [MCP 集成说明](./MCP_INTEGRATION.md)
+- [参赛声明](./CONTEST_DECLARATION.md)
+- [配置示例](./mcp-config.example.json)
 
 ---
 
@@ -55,9 +55,12 @@
 
 ```
 m-code-skills/
-├── README.md                    # 项目说明（本文件）
-├── MCP说明.md                    # mcd-mcp 能力说明与工具清单
-├── 参赛申明.md                   # 参赛声明
+├── README.md                    # 项目介绍、安装、使用和目标用户
+├── CONTEST_DECLARATION.md       # 官方参赛声明（原文）
+├── MCP_INTEGRATION.md           # MCP Server、Tool、调用流程及价值
+├── mcp-config.example.json      # 仅包含环境变量占位符的配置示例
+├── MCP说明.md                    # 扩展工具清单（非官方必需文件）
+├── 参赛申明.md                   # 指向官方标准声明的说明
 ├── .gitignore
 ├── mcd-nutrition-advisor/
 │   ├── SKILL.md                 # 主文档：触发描述 + 核心能力 + 工作流 + 重要规则
@@ -85,6 +88,10 @@ mcd-<skill-name>/
 ```
 
 ---
+
+## 目标用户
+
+面向使用 WorkBuddy 且已连接麦当劳 MCP 的用户，包括关注餐品营养、优惠与积分规划的个人，以及希望协调多人点餐、筹办麦当劳主题活动的组织者。项目仅提供辅助决策和调用流程，非麦当劳官方产品；真实价格、供应、权益和营养信息以官方实时结果为准。
 
 ## 安装
 
@@ -121,11 +128,7 @@ ln -s "$(pwd)"/mcd-* ~/.workbuddy-ai/skills/
 ## 依赖
 
 - WorkBuddy AI 客户端
-- **mcd-mcp** 连接器（麦当劳官方 MCP）— 详见 [MCP说明.md](./MCP说明.md)
+- **mcd-mcp** 连接器（麦当劳中国 MCP Server）— 详见 [MCP_INTEGRATION.md](./MCP_INTEGRATION.md) 和 [官方使用指南](https://github.com/M-China/mcd-mcp-server)
 - Python 3.9+（仅在本地打包 / 校验 Skill 时使用，非运行时依赖）
 
----
-
-## License
-
-MIT
+参赛文件按 [活动仓库要求](https://github.com/M-China/mcd-developer-innovation-challenge) 命名；如参加 WorkBuddy 专项奖励，还需由参赛者自行导出、检查并提交完整开发对话 `workbuddy.md`。本仓库目前未附该文件，不代表已具备专项奖励材料。
